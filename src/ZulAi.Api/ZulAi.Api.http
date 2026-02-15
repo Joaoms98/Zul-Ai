@@ -1,0 +1,6 @@
+@ZulAi.Api_HostAddress = http://localhost:5187
+
+GET {{ZulAi.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0a0a0a;
+  --bg-panel: #111111;
+  --bg-hover: #1a1a1a;
+  --green: #00ff41;
+  --green-dim: #00aa2a;
+  --green-glow: rgba(0, 255, 65, 0.15);
+  --cyan: #00e5ff;
+  --magenta: #ff00ff;
+  --yellow: #ffff00;
+  --red: #ff3333;
+  --white: #cccccc;
+  --dim: #555555;
+  --border: #222222;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--green);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--green-dim);
+  border-radius: 3px;
+}
+
+::selection {
+  background: var(--green);
+  color: var(--bg);
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--green-dim);
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover:not(:disabled) {
+  background: var(--green);
+  color: var(--bg);
+  box-shadow: 0 0 12px var(--green-glow);
+}
+
+button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+button.danger {
+  color: var(--red);
+  border-color: var(--red);
+}
+button.danger:hover:not(:disabled) {
+  background: var(--red);
+  color: var(--bg);
+}
+
+button.cyan {
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+button.cyan:hover:not(:disabled) {
+  background: var(--cyan);
+  color: var(--bg);
+}
+
+input, select {
+  font-family: inherit;
+  font-size: inherit;
+  background: var(--bg);
+  color: var(--green);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  outline: none;
+}
+input:focus, select:focus {
+  border-color: var(--green-dim);
+  box-shadow: 0 0 8px var(--green-glow);
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
